@@ -7,7 +7,8 @@
     "dev": "ts-node-dev src",
     "build": "tsc",
     "start": "node ./build",
-    "test": "tsc features/**/*.ts --outDir build_test && cp features/user.feature build_test/user.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test"
+    "test": "tsc features/**/*.ts --outDir build_test && cp features/user.feature build_test/user.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test",
+    "test_web": "tsc features/**/*.ts --outDir build_test && cp features/web.feature build_test/web.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "chai": "^4.3.6",
     "express": "^4.18.2",
     "nanoid": "3.3.4",
+    "selenium-webdriver": "^4.5.0",
     "ts-node-dev": "1.1.8"
   }
 }
