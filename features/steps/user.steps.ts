@@ -6,7 +6,7 @@ Given("Api it's working", function () {
   // Write code here that turns the phrase above into concrete actions
 });
 
-When("Input the following json", function (doc: string) {
+When("Input the following json", async function (doc: string) {
   const model = JSON.parse(doc);
 
   const user = User.of({
@@ -15,7 +15,7 @@ When("Input the following json", function (doc: string) {
     passwordHash: model.password,
   });
   this.id = user.id;
-  this.userRepository.create(user);
+  await this.userRepository.create(user);
 });
 
 Then("the response is", async function (doc: string) {

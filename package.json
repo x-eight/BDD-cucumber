@@ -8,6 +8,7 @@
     "build": "tsc",
     "start": "node ./build",
     "test": "tsc features/**/*.ts --outDir build_test && cp features/user.feature build_test/user.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test",
+    "test_multiple": "tsc features/**/*.ts --outDir build_test && cp features/multiple.case.feature build_test/multiple.case.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test",
     "test_web": "tsc features/**/*.ts --outDir build_test && cp features/web.feature build_test/web.feature && ./node_modules/@cucumber/cucumber/bin/cucumber-js build_test"
   },
   "author": "",

@@ -19,7 +19,7 @@ Start the server running the following command:
 pnpm run dev
 ```
 
-## Start test
+## Start normal test
 
 Start test cases:
 
@@ -27,7 +27,16 @@ Start test cases:
 pnpm test
 ```
 
-## Start test web
+## Start multiple test
+
+Start test cases:
+
+```sh
+pnpm test_multiple
+
+```
+
+## Start automation testing
 
 Start test cases:
 
@@ -36,5 +45,11 @@ Start test cases:
     - npm install
     - npm start
 
--   pnpm test_web
+-   clone branch main:
+    - pnpm test_web
 ```
+
+## Note:
+
+Remove the build_test folder every time a new test is run
+
