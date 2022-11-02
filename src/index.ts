@@ -1,5 +1,6 @@
 import express from "express";
 import { userApi } from "./routes";
+import { config } from "./config";
 
 async function test() {
   try {
@@ -10,8 +11,8 @@ async function test() {
 
     app.use("/v1", userApi());
 
-    app.listen(3000, () => {
-      console.log("server 3000");
+    app.listen(config.port, () => {
+      console.log(`Server runnning at port ${config.port}`);
     });
   } catch (error) {
     console.error("Unable to start the server: ", error);
